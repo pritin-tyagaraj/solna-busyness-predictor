@@ -1,8 +1,14 @@
 import express from 'express'
+import path from 'path'
+import * as routes from './routes'
+
 const app = express()
+app.set('view engine', 'ejs')
+app.set('views', path.resolve('dist/views'))
 
 // Routes
-app.get('/', (req, res) => res.send("Hey!"))
+app.get('/', routes.home)
+app.get('/subscribe', routes.subscribe)
 
 // Start server
 const port = 9000
