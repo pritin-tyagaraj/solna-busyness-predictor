@@ -9,18 +9,22 @@
   "private": false,
   "scripts": {
     "start": "rm -rf dist && tsc && copyfiles -u 1 src/**/*.ejs dist/ && node dist/index.js",
-    "start:dev": "nodemon -e ts,ejs --ignore dist/ --exec \"yarn start\""
+    "start:dev": "nodemon -e ts,tsx,ejs --ignore dist/ --exec \"yarn start\""
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.8.3",
     "@types/express": "^4.17.3",
+    "@types/react": "^16.9.25",
     "copyfiles": "^2.2.0",
     "nodemon": "^2.0.2",
+    "open": "^7.0.3",
     "tslint": "^6.1.0",
     "typescript": "^3.8.3"
   },
   "dependencies": {
     "ejs": "^3.0.1",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   }
 }

@@ -1,15 +1,10 @@
 import express from 'express'
 import path from 'path'
-import routes from './routes/index'
 
 const app = express()
 
-// Configure view engine
-app.set('views', path.join(__dirname, './views'))
-app.set('view engine', 'ejs')
-
 // Routes
-app.use('/', routes)
+app.get('/', (req, res) => res.send("Hey!"))
 
 // Start server
 const port = 3000
