@@ -1,13 +1,11 @@
 import express from 'express'
-import path from 'path'
-
 const app = express()
 
 // Routes
 app.get('/', (req, res) => res.send("Hey!"))
 
 // Start server
-const port = 3000
+const port = 9000
 app.listen(port, err => {
   if (err) {
     return console.error(err)

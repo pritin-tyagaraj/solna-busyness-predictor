@@ -8,7 +8,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "start": "rm -rf dist && tsc && copyfiles -u 1 src/**/*.ejs dist/ && node dist/index.js",
+    "start": "webpack && node dist/index.js",
     "start:dev": "nodemon -e ts,tsx,ejs --ignore dist/ --exec \"yarn start\""
   },
   "devDependencies": {
@@ -18,8 +18,12 @@
     "copyfiles": "^2.2.0",
     "nodemon": "^2.0.2",
     "open": "^7.0.3",
+    "ts-loader": "^6.2.2",
     "tslint": "^6.1.0",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-middleware": "^3.7.2"
   },
   "dependencies": {
     "ejs": "^3.0.1",
