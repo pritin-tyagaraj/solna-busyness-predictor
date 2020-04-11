@@ -7,8 +7,7 @@
   "author": "Pritin Tyagaraj <pritin.tyagaraj@klarna.com>",
   "license": "MIT",
   "scripts": {
-    "heroku-prebuild": "yarn install --production=false",
-    "start:web": "cd modules/client && yarn start"
+    "start:web": "cd modules/client && yarn && yarn start"
   },
   "workspaces": [
     "modules/web-scraper",
