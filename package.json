@@ -6,6 +6,9 @@
   "repository": "git@github.com:pritin-tyagaraj/solna-busyness-predictor.git",
   "author": "Pritin Tyagaraj <pritin.tyagaraj@klarna.com>",
   "license": "MIT",
+  "scripts": {
+    "start:web": "cd modules/client && yarn && yarn start"
+  },
   "workspaces": [
     "modules/web-scraper",
     "modules/notifier",

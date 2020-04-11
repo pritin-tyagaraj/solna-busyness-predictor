@@ -12,7 +12,7 @@ app.get('/', routes.home)
 app.get('/subscribe', routes.subscribe)
 
 // Start server
-const port = 9000
+const port = parseInt(process.env.PORT) || 9000
 app.listen(port, err => {
   if (err) {
     return console.error(err)
