@@ -4,7 +4,8 @@ import * as routes from './routes'
 
 const app = express()
 app.set('view engine', 'ejs')
-app.set('views', path.resolve('dist/views'))
+app.set('views', path.resolve('dist/view-templates'))
+app.use(express.static('dist'))
 
 // Routes
 app.get('/', routes.home)

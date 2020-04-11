@@ -3,10 +3,14 @@
     "esModuleInterop": true,
     "incremental": true,
     "jsx": "react",
+    "lib": ["es6", "dom"],
     "module": "es6",
     "moduleResolution": "Node",
     "outDir": "dist",
     "target": "es6",
   },
+  "include": [
+    "./src"
+  ],
   "exclude": ["node_modules", "dist"]
 }

@@ -4,7 +4,11 @@ const CopyPlugin = require('copy-webpack-plugin');
 module.exports = {
   target: 'node',
   mode: 'development',
-  entry: './src/index.ts',
+  entry: {
+    app: ['./src/index.ts'],
+    vendor: ['@babel/polyfill', 'react'],
+    home: ['./src/routes/home/client-script.tsx']
+  },
   externals: {
     'express': 'commonjs express'
   },
@@ -16,16 +20,16 @@ module.exports = {
     }]
   },
   resolve: {
-    extensions: ['.ts']
+    extensions: ['.js', '.jsx', '.ts', '.tsx']
   },
   output: {
-    filename: 'index.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist')
   },
   plugins: [
     new CopyPlugin([{
-      from: 'src/views',
-      to: 'views'
+      from: 'src/view-templates',
+      to: 'view-templates'
     }])
   ]
 }
